@@ -1,0 +1,1 @@
+console.log("StudyMate loaded successfully");
