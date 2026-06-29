@@ -133,7 +133,7 @@ database/schema.sql
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/studymate.git
+git clone https://github.com/cjdebug/studymate.git
 ```
 
 ### 2. Move the project to XAMPP
@@ -204,7 +204,7 @@ DB_PASSWORD=
 APP_BASE_URL=/studymate
 ```
 
-The real `.env` file should not be uploaded to GitHub because it may contain private database details.
+The real `.env` file is not uploaded to GitHub because it contains private database details.
 
 ## Security Features Used
 
