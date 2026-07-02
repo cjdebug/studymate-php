@@ -90,6 +90,7 @@ include '../includes/header.php';
             ><?php echo htmlspecialchars($description); ?></textarea>
         </div>
 
+        <!-- update and cancel buttons -->
         <button type="submit" class="btn btn-primary">Update Subject</button>
         <a href="index.php" class="btn btn-secondary">Cancel</a>
     </form>
