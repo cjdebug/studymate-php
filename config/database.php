@@ -1,4 +1,7 @@
 <?php
+// Database configuration.
+// Local XAMPP values are used by default.
+// Environment variables can be used if the project is deployed later.
 
 // Database connection 
 

@@ -34,7 +34,8 @@ The main local version of this project is completed.
 
 - Improved UI design
 - Screenshots
-- Railway live deployment
+- XAMPP for local development
+- GitHub for version control and project sharing
 - Demo login account
 - Extra dashboard improvements
 
@@ -318,19 +319,14 @@ I reviewed the code, tested each feature locally, fixed issues, added comments w
 
 ## Live Demo
 
-Live demo will be added after deployment.
-
-```text
-Coming soon
-```
+This project is currently available as a local development project. A live demo is not available at the moment because the project uses PHP and MySQL and requires a hosting platform with database support.
 
 ## Demo Account
 
-A demo account will be added after deployment.
+A demo account is not included because the project is intended to be set up locally using the database schema.
 
-```text
-Coming soon
-```
+Users can register a new account after importing the database structure.
+
 
 ## Author
 
