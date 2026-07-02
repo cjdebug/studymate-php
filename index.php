@@ -18,13 +18,23 @@ require_once 'includes/header.php';
                 lab tests, viva preparation, and daily study tasks in one simple place.
             </p>
 
-            <a href="<?php echo $base_url; ?>/auth/register.php" class="btn btn-primary btn-lg me-2">
-                Get Started
-            </a>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <a href="<?php echo $base_url; ?>/dashboard.php" class="btn btn-primary btn-lg">
+                    Go to Dashboard
+                </a>
 
-            <a href="<?php echo $base_url; ?>/auth/login.php" class="btn btn-outline-primary btn-lg">
-                Login
-            </a>
+                <a href="<?php echo $base_url; ?>/tasks/index.php" class="btn btn-outline-primary btn-lg">
+                    Manage Tasks
+                </a>
+            <?php else: ?>
+                <a href="<?php echo $base_url; ?>/auth/register.php" class="btn btn-primary btn-lg">
+                    Get Started
+                </a>
+
+                <a href="<?php echo $base_url; ?>/auth/login.php" class="btn btn-outline-primary btn-lg">
+                    Login
+                </a>
+            <?php endif; ?>
         </div>
 
         <div class="col-md-6 mt-4 mt-md-0">
