@@ -6,7 +6,7 @@ The application helps students organize their university work by managing subjec
 
 ## Project Status
 
-This project is currently under development.
+The main local version of this project is completed.
 
 ### Completed
 
@@ -21,47 +21,72 @@ This project is currently under development.
 - User logout
 - PHP session-based authentication
 - Protected dashboard
-- Basic Bootstrap layout
-
-### Planned
-
 - Subjects management
 - Tasks management
 - Edit and delete features
 - Mark tasks as completed
 - Task filtering by status and priority
 - Dashboard statistics
+- Upcoming deadlines table
+- Basic Bootstrap layout
+
+### Planned / Future Improvements
+
 - Improved UI design
+- Screenshots
 - Railway live deployment
 - Demo login account
-- Screenshots
+- Extra dashboard improvements
 
 ## Features
 
-### Current Features
+### Authentication Features
 
 - User registration
 - User login
 - User logout
-- Protected dashboard
+- Session-based page protection
 - Password hashing using PHP `password_hash()`
 - Password verification using PHP `password_verify()`
-- Database queries using PDO prepared statements
-- Bootstrap-based responsive layout
 
-### Upcoming Features
+### Subject Management
 
-- Add subjects/modules
+- Add subjects
 - View subjects
 - Edit subjects
 - Delete subjects
+
+### Task Management
+
 - Add study tasks
 - View tasks
 - Edit tasks
 - Delete tasks
 - Mark tasks as completed
-- Filter tasks
-- View dashboard summary counts
+- Set task priority
+- Set task deadline
+- Connect tasks to subjects
+- Create tasks without a subject if needed
+
+### Task Filtering
+
+- Filter tasks by status
+  - Pending
+  - Completed
+- Filter tasks by priority
+  - Low
+  - Medium
+  - High
+- Reset filters
+
+### Dashboard
+
+- Total subjects count
+- Total tasks count
+- Pending tasks count
+- Completed tasks count
+- High priority pending tasks count
+- Upcoming deadlines table
 
 ## Tech Stack
 
@@ -71,6 +96,7 @@ This project is currently under development.
 - CSS
 - Bootstrap
 - JavaScript
+- PDO
 - XAMPP for local development
 - Railway for planned live deployment
 
@@ -92,6 +118,7 @@ studymate/
 │   └── schema.sql
 │
 ├── includes/
+│   ├── auth_check.php
 │   ├── header.php
 │   └── footer.php
 │
@@ -100,6 +127,19 @@ studymate/
 │   │   └── style.css
 │   └── js/
 │       └── script.js
+│
+├── subjects/
+│   ├── index.php
+│   ├── add.php
+│   ├── edit.php
+│   └── delete.php
+│
+├── tasks/
+│   ├── index.php
+│   ├── add.php
+│   ├── edit.php
+│   ├── delete.php
+│   └── complete.php
 │
 ├── dashboard.php
 ├── index.php
@@ -133,7 +173,7 @@ database/schema.sql
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/cjdebug/studymate.git
+git clone https://github.com/cjdebug/studymate-php.git
 ```
 
 ### 2. Move the project to XAMPP
@@ -191,7 +231,7 @@ http://localhost/studymate
 
 ## Environment Variables
 
-This project includes an `.env.example` file to show the required environment variables.
+This project includes an `.env.example` file to show the required environment variable names.
 
 Example:
 
@@ -204,7 +244,11 @@ DB_PASSWORD=
 APP_BASE_URL=/studymate
 ```
 
-The real `.env` file is not uploaded to GitHub because it contains private database details.
+For local XAMPP development, the project can use default local database values such as `localhost`, database name `studymate`, username `root`, and an empty password.
+
+For deployment, these values can be changed according to the hosting platform.
+
+The real `.env` file is not uploaded to GitHub because it can contain private database details.
 
 ## Security Features Used
 
@@ -214,8 +258,21 @@ This project includes basic backend security practices such as:
 - Password verification using `password_verify()`
 - PDO prepared statements to reduce SQL injection risk
 - Session-based authentication
-- Protected dashboard access
+- Protected page access
+- User-specific data access using `user_id`
 - `htmlspecialchars()` when displaying user-provided data
+
+## Default Usage Flow
+
+1. Register a new account.
+2. Login using the registered account.
+3. Add subjects.
+4. Add tasks and connect them to subjects if needed.
+5. Set task priority and deadline.
+6. View tasks from the task management page.
+7. Filter tasks by status or priority.
+8. Mark tasks as completed.
+9. Use the dashboard to view progress and upcoming deadlines.
 
 ## Development Note
 
@@ -223,7 +280,11 @@ This project was built as a personal backend development project to improve my p
 
 During development, I used AI as a learning guide because I could not find a YouTube tutorial that matched the exact type of project and explanation style I needed. I did not use it only to copy and paste code. I used it to get step-by-step guidance, understand the purpose of each file, learn how the code works, and improve the structure of the project.
 
-I reviewed the code, tested each feature locally, fixed issues, added comments where needed, and made sure I understood the main backend concepts used in the project, such as database connection, password hashing, sessions, prepared statements, and user authentication.
+I reviewed the code, tested each feature locally, fixed issues, added comments where needed, and made sure I understood the main backend concepts used in the project, such as database connection, password hashing, sessions, prepared statements, CRUD operations, filtering, and user authentication.
+
+## Screenshots
+
+Screenshots will be added after the UI is finalized.
 
 ## Live Demo
 
