@@ -5,7 +5,7 @@
 
 // Database connection 
 
-//set database host // when deploying to Railway, using DB_HOST.
+//set database host 
 $host = getenv('DB_HOST') ?: getenv('MYSQLHOST') ?: 'localhost';
 //set database port
 $port = getenv('DB_PORT') ?: getenv('MYSQLPORT') ?: '3306';

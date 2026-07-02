@@ -33,11 +33,9 @@ The main local version of this project is completed.
 ### Planned / Future Improvements
 
 - Improved UI design
-- Screenshots
-- XAMPP for local development
-- GitHub for version control and project sharing
 - Demo login account
 - Extra dashboard improvements
+- Optional future live deployment
 
 ## Features
 
@@ -99,7 +97,7 @@ The main local version of this project is completed.
 - JavaScript
 - PDO
 - XAMPP for local development
-- Railway for planned live deployment
+- GitHub for version control and project sharing
 
 ## Project Structure
 
