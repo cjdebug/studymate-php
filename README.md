@@ -284,7 +284,37 @@ I reviewed the code, tested each feature locally, fixed issues, added comments w
 
 ## Screenshots
 
-Screenshots will be added after the UI is finalized.
+### Homepage
+
+![Homepage](screenshots/homepage.png)
+
+### Register Page
+
+![Register Page](screenshots/register.png)
+
+### Login Page
+
+![Login Page](screenshots/login.png)
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Subjects Page
+
+![Subjects Page](screenshots/subjects.png)
+
+### Add Subject Page
+
+![Add Subject Page](screenshots/add-subject.png)
+
+### Tasks Page
+
+![Tasks Page](screenshots/tasks.png)
+
+### Add Task Page
+
+![Add Task Page](screenshots/add-task.png)
 
 ## Live Demo
 
