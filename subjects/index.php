@@ -21,7 +21,7 @@ include '../includes/header.php';
 <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>My Subjects</h2>
-        <a href="add.php" class="btn btn-primary">Add Subject</a>
+        <a href="add.php" class="btn btn-secondary">Add Subject</a>
     </div>
 
     <!-- checks whether there are any subjects to display -->

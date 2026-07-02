@@ -28,7 +28,7 @@ $page_title = $page_title ?? 'StudyMate';
 <body>
 
 <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <!-- Website Name / Logo -->
         <a class="navbar-brand fw-bold" href="<?php echo $base_url; ?>/index.php">

@@ -100,7 +100,7 @@ require_once '../includes/header.php';
                         >
                     </div>
 
-                    <button type="submit" class="btn btn-primary w-100">
+                    <button type="submit" class="btn btn-secondary w-100">
                         Login
                     </button>
                 </form>

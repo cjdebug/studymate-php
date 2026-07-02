@@ -19,19 +19,19 @@ require_once 'includes/header.php';
             </p>
 
             <?php if (isset($_SESSION['user_id'])): ?>
-                <a href="<?php echo $base_url; ?>/dashboard.php" class="btn btn-primary btn-lg">
+                <a href="<?php echo $base_url; ?>/dashboard.php" class="btn btn-secondary btn-lg">
                     Go to Dashboard
                 </a>
 
-                <a href="<?php echo $base_url; ?>/tasks/index.php" class="btn btn-outline-primary btn-lg">
+                <a href="<?php echo $base_url; ?>/tasks/index.php" class="btn btn-outline-secondary btn-lg">
                     Manage Tasks
                 </a>
             <?php else: ?>
-                <a href="<?php echo $base_url; ?>/auth/register.php" class="btn btn-primary btn-lg">
+                <a href="<?php echo $base_url; ?>/auth/register.php" class="btn btn-secondary btn-lg">
                     Get Started
                 </a>
 
-                <a href="<?php echo $base_url; ?>/auth/login.php" class="btn btn-outline-primary btn-lg">
+                <a href="<?php echo $base_url; ?>/auth/login.php" class="btn btn-outline-secondary btn-lg">
                     Login
                 </a>
             <?php endif; ?>

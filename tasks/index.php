@@ -53,7 +53,7 @@ include '../includes/header.php';
 <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>My Tasks</h2>
-        <a href="add.php" class="btn btn-primary">Add Task</a>
+        <a href="add.php" class="btn btn-secondary">Add Task</a>
     </div>
 
     <form method="GET" class="row g-3 mb-4">
@@ -78,7 +78,7 @@ include '../includes/header.php';
 
         <div class="col-md-4">
             <!-- submits the form and applies selected filters -->
-            <button type="submit" class="btn btn-outline-primary">Filter</button>
+            <button type="submit" class="btn btn-outline-success">Filter</button>
             <!-- reset goes back to the default view -->
             <a href="index.php" class="btn btn-outline-secondary">Reset</a>
         </div>

@@ -162,11 +162,11 @@ require_once 'includes/header.php';
                     <?php endif; ?>
                 </div>
 
-                <a href="subjects/index.php" class="btn btn-primary">
+                <a href="subjects/index.php" class="btn btn-secondary">
                     Manage Subjects
                 </a>
 
-                <a href="tasks/index.php" class="btn btn-outline-primary">
+                <a href="tasks/index.php" class="btn btn-outline-secondary">
                     Manage Tasks
                 </a>
             </div>
