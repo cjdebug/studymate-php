@@ -1,9 +1,9 @@
 <?php
 
-//imports app.php
+//Imports app.php
 require_once __DIR__ . '/../config/app.php';
 
-//starts a php session if it hasn't been started already
+//Starts a PHP session if it has not been started already
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -30,19 +30,72 @@ $page_title = $page_title ?? 'StudyMate';
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-        <!-- Website Name Logo -->
+        <!-- Website Name / Logo -->
         <a class="navbar-brand fw-bold" href="<?php echo $base_url; ?>/index.php">
             StudyMate
         </a>
 
-        <div class="ms-auto">
-            <?php if (isset($_SESSION['user_id'])): ?>
-                <a href="<?php echo $base_url; ?>/dashboard.php" class="btn btn-light btn-sm">Dashboard</a>
-                <a href="<?php echo $base_url; ?>/auth/logout.php" class="btn btn-outline-light btn-sm">Logout</a>
-            <?php else: ?>
-                <a href="<?php echo $base_url; ?>/auth/login.php" class="btn btn-light btn-sm">Login</a>
-                <a href="<?php echo $base_url; ?>/auth/register.php" class="btn btn-outline-light btn-sm">Register</a>
-            <?php endif; ?>
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+
+        <!-- Navbar links wrapper -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <!-- Navbar list -->
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
+                <?php if (isset($_SESSION['user_id'])): ?>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="<?php echo $base_url; ?>/dashboard.php">
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <!-- Subject link -->
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="<?php echo $base_url; ?>/subjects/index.php">
+                            Subjects
+                        </a>
+                    </li>
+
+                    <!-- Task link -->
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="<?php echo $base_url; ?>/tasks/index.php">
+                            Tasks
+                        </a>
+                    </li>
+
+                    <!-- showing logged-in user name -->
+                    <li class="nav-item">
+                        <span class="navbar-text text-white small me-lg-2">
+                            <?php echo htmlspecialchars($_SESSION['user_name']); ?>
+                        </span>
+                    </li>
+
+                    <!-- Logout link -->
+                    <li class="nav-item">
+                        <a href="<?php echo $base_url; ?>/auth/logout.php" class="btn btn-outline-light btn-sm">
+                            Logout
+                        </a>
+                    </li>
+                <?php else: ?>
+                    <!-- Login links -->
+                    <li class="nav-item">
+                        <a href="<?php echo $base_url; ?>/auth/login.php" class="btn btn-light btn-sm">
+                            Login
+                        </a>
+                    </li>
+
+                    <!-- Register link -->
+                    <li class="nav-item">
+                        <a href="<?php echo $base_url; ?>/auth/register.php" class="btn btn-outline-light btn-sm">
+                            Register
+                        </a>
+                    </li>
+                <?php endif; ?>
+            </ul>
         </div>
     </div>
 </nav>
